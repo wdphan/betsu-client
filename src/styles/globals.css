@@ -12,6 +12,8 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-family: 'Source Code Pro', monospace;
 	/* other font */
+
+	background-color: black;
 }
 
 a {
@@ -25,6 +27,5 @@ a {
 /* 
 got rid of scrollbars  */
 html {
-	overflow-y: hidden; /* Hide vertical scrollbar */
 	overflow-x: hidden;
 }

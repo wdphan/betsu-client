@@ -25,31 +25,11 @@
 }
 .address {
 	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
 	font-size: 1rem;
 	align-items: center;
 	text-align: center;
 	color: #afafaf;
 	text-transform: uppercase;
 	font-family: inter;
-}
-
-.border {
-	margin-top: 25rem;
-	border-top: 1px solid white;
-	align-items: center;
-	text-align: center;
-}
-
-.button {
-	background: white;
-	color: black;
-	font-weight: bold;
-	font-size: medium;
-	font-family: inter;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	padding-right: 0.75rem;
-	padding-left: 0.75rem;
-	margin-top: 3rem;
-	margin-right: 2rem;
 }

@@ -3,10 +3,11 @@
 .header {
 	background: white;
 	border-bottom: 1px solid white;
+	position: realtive;
 }
 
 .logo {
-	position: fixed;
+	position: absolute;
 	justify-content: flex-start;
 	padding-left: 4rem;
 	padding-top: 0rem;

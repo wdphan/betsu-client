@@ -4,6 +4,7 @@ import styles from '../styles/rent.module.css'
 import { useAccount, useEnsName } from 'wagmi'
 import UserNFTList from '@/components/UserNFTList'
 import NFTCard from '@/components/NFTCard'
+import RentButton from '@/components/RentButton'
 
 const rent = () => {
 	const { address, isConnecting, isDisconnected } = useAccount()
@@ -27,10 +28,9 @@ const rent = () => {
 				<div className={styles.ethname}>{data}</div>
 				<div className={styles.address}>{address ?? 'Loading address'}</div>
 				<div>
+					<RentButton />
 					<UserNFTList />
-				</div>
-				<div className={styles.border}>
-					<button className={styles.button}>RENT OUT NFT</button>
+					<div className="pb-32"></div>
 				</div>
 			</div>
 		</div>

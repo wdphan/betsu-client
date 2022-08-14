@@ -25,12 +25,10 @@ const NFTList = () => {
 		setNFTs(data.ownedNfts)
 	}
 
-	// need to setNFTs with response from JSON
 	useEffect(() => {
 		UserNFTList()
 	}, [address])
 
-	// NFT CARDS DISPLAYED
 	return (
 		<div>
 			<section className="flex flex-wrap justify-center align-center">
@@ -55,13 +53,3 @@ const NFTList = () => {
 	)
 }
 export default NFTList
-// NFT Card is working since I replaced it in rent.tsx and it showed up without data.
-// data is showing up in dom
-// so the only thing is that the NFT Card is not working in USERNFTList.tsx. It's not able to disolay the NFT Card.
-
-// image={NFT.media[0].gateway}
-// id={NFT.id.tokenId}
-// title={NFT.title}
-// address={NFT.contract.address}
-// description={NFT.description}
-// attributes={NFT.metadata.attributes}

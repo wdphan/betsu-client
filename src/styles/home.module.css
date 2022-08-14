@@ -56,6 +56,13 @@
 	margin-right: 2rem;
 }
 
+.button1:hover {
+	border: 3px solid #2ed0db;
+}
+.button2:hover {
+	border: 3px solid #2ed0db;
+}
+
 .button2 {
 	font-weight: bold;
 	font-size: medium;

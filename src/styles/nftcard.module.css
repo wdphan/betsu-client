@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.container {
+	display: flex;
+	flex-direction: column;
+	margin-right: 3rem;
+	margin-bottom: 4rem;
+	margin-top: 4rem;
+	margin-bottom: 0rem;
+	background: black;
+	width: 20%;
+	height: 30rem;
+	border: 1px solid white;
+}
+
+.container:hover {
+	border: 3px solid #2ed0db;
+}
+
+.image {
+	object-fit: cover;
+	height: 100%;
+}
+
+.title {
+	font-family: Inter;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.address {
+	font-size: small;
+	font-family: Inter;
+}
+
+.id {
+	font-size: xx-small;
+	font-family: Inter;
+}
+
+.description {
+	font-size: xx-small;
+	font-family: Inter;
+	text-transform: uppercase;
+}
+
+.grey {
+	color: #afafaf;
+}

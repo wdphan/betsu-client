@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+}
+
+.border {
+	width: 100%;
+	margin-top: 30.5rem;
+	border-top: 1px solid white;
+	align-items: center;
+	text-align: center;
+	position: fixed;
+	background: black;
+}
+
+.button {
+	background: white;
+	color: black;
+	font-weight: bold;
+	font-size: medium;
+	font-family: inter;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.button:hover {
+	border: 3px solid #2ed0db;
+}
