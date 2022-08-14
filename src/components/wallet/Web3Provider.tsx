@@ -1,13 +1,12 @@
 import { useTheme } from 'next-themes'
-import { APP_NAME } from '@/lib/consts'
 import { createClient, WagmiConfig } from 'wagmi'
 import { ConnectKitProvider, getDefaultClient } from 'connectkit'
 
 const client = createClient(
 	getDefaultClient({
-		appName: APP_NAME,
+		appName: process.env.APP_NAME,
 		autoConnect: true,
-		infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
+		infuraId: process.env.ALCHEMY_API_KEY,
 	})
 )
 
@@ -16,7 +15,14 @@ const Web3Provider = ({ children }) => {
 
 	return (
 		<WagmiConfig client={client}>
-			<ConnectKitProvider mode={resolvedTheme as 'light' | 'dark'}>{children}</ConnectKitProvider>
+			<ConnectKitProvider
+				theme="minimal"
+				customTheme={{
+					'--ck-font-family': '"Train One", cursive',
+				}}
+			>
+				{children}
+			</ConnectKitProvider>
 		</WagmiConfig>
 	)
 }

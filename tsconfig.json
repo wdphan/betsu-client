@@ -20,6 +20,12 @@
 			"@images/*": ["public/images/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"src/components/UserNFTList.js",
+		"src/components/UserNFTList.js"
+	],
 	"exclude": ["node_modules"]
 }
