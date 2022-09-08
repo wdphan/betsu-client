@@ -14,18 +14,18 @@ const Header = () => {
 				<div>
 					<div className={styles.body}>
 						<div className={styles.link}>
-							<a className="nav-link" href="#">
-								YOUR NFTS
+							<a className="nav-link" href="/listNFT">
+								LIST NFT
 							</a>
 						</div>
 						<div className={styles.link}>
-							<a className="nav-link active" aria-current="page" href="#">
-								ABOUT
+							<a className="nav-link active" aria-current="page" href="/yourNFTs">
+								YOUR NFTs
 							</a>
 						</div>
 						<div className={styles.link}>
-							<a className="nav-link" href="#">
-								FAQ
+							<a className="nav-link" href="/rent">
+								RENT
 							</a>
 						</div>
 						<div className={styles.wallet}>

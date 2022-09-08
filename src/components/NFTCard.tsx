@@ -1,5 +1,7 @@
 import styles from '../styles/nftcard.module.css'
 
+// nftCard - nfttile on marketplace ex
+
 const NFTCard = ({ image, id, title, address, description, attributes }) => {
 	return (
 		<div className={styles.container}>
@@ -18,7 +20,7 @@ const NFTCard = ({ image, id, title, address, description, attributes }) => {
 					</div>
 				</div>
 				<div className={styles.id}>
-					<span className={styles.grey}>ID: </span> {id.slice(0, 4)}...${id.slice(id.length - 4)}
+					<span className={styles.grey}>TOKEN ID: </span> {id.slice(0, 4)}...${id.slice(id.length - 4)}
 				</div>
 				<p className={styles.description}>
 					<span className={styles.grey}>DESCRIPTION: </span>
