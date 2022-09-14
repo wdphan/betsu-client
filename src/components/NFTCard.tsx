@@ -1,5 +1,5 @@
 import styles from '../styles/nftcard.module.css'
-
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 // nftCard - nfttile on marketplace ex
 
 const NFTCard = ({ image, id, title, address, description, attributes }) => {

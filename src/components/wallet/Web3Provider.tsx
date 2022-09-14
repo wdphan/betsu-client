@@ -1,12 +1,46 @@
 import { useTheme } from 'next-themes'
-import { createClient, WagmiConfig } from 'wagmi'
+import { WagmiConfig, createClient, chain, configureChains } from 'wagmi'
 import { ConnectKitProvider, getDefaultClient } from 'connectkit'
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
+
+const avalancheChain = {
+	id: 43_114,
+	name: 'Avalanche',
+	nativeCurrency: {
+		decimals: 18,
+		name: 'Avalanche',
+		symbol: 'AVAX',
+	},
+	rpcUrls: {
+		default: 'https://api.avax.network/ext/bc/C/rpc',
+	},
+	blockExplorers: {
+		default: { name: 'SnowTrace', url: 'https://snowtrace.io' },
+		snowtrace: { name: 'SnowTrace', url: 'https://snowtrace.io' },
+	},
+	testnet: false,
+}
+
+const { provider, chains } = configureChains(
+	[chain.mainnet, chain.goerli, chain.polygon, chain.optimism, chain.arbitrum],
+	[
+		alchemyProvider({ apiKey: process.env.ALCHEMY_API_KEY }),
+		jsonRpcProvider({
+			rpc: chain => {
+				if (chain.id !== avalancheChain.id) return null
+				return { http: chain.rpcUrls.default }
+			},
+		}),
+	]
+)
 
 const client = createClient(
 	getDefaultClient({
 		appName: process.env.APP_NAME,
 		autoConnect: true,
-		infuraId: process.env.ALCHEMY_API_KEY,
+		alchemyId: process.env.ALCHEMY_API_KEY,
+		chains: chains,
 	})
 )
 
